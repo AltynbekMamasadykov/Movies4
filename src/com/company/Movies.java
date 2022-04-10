@@ -39,4 +39,14 @@ public class Movies {
         return director;
     }
 
+    @Override
+    public String toString() {
+        return
+                "Movie name: " + name + "\n" +
+                "year: " + year +"\n"+
+                "description: " + description + "\n" +
+                "director: " + director +"\n"+
+                "cast: " + cast +"\n"+
+                '}';
+    }
 }

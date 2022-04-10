@@ -5,14 +5,26 @@ import java.util.Scanner;
 
 public class Main {
     private static final List<Movies> movies = JsonIO.getMovies();
-    private static SortAble s = (SortAble) new MovieStore();
-    private static FindAble f = (FindAble) new FindByMap();
+    private static SortAble s = new MovieStore();
+    private static FindAble f = new FindByMap();
     private static Scanner in = new Scanner(System.in);
 
     public static void main(String[] args) throws InputException {
-//        while (true) {
-//            start();
-//        }
+
+        s.printAllMovies(movies);
+
+        while (true) {
+            commads();
+            int inputNumber = in.nextInt();
+            if(inputNumber==1){
+                s.printAllMovies(movies);
+            }else if(inputNumber==2){
+                s.findMovie(movies);
+            }
+        }
+
+
+
     }
 
 
@@ -28,6 +40,7 @@ public class Main {
         System.out.println("Press 8 to find movies by year");
         System.out.println("Press 9 to List all movies and roles by actor's name");
         System.out.println("Press 10 to sorted List of all actors with his roles");
+        System.out.println("Press 0 to quit");
         System.out.println("---------------------------------------------");
     }
 
