@@ -1,5 +1,6 @@
-package com.company;
+package com.company.services;
 
+import com.company.Movies;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;

@@ -1,9 +1,11 @@
 package com.company;
 
+import com.company.interfaces.FindAble;
+
 import java.util.List;
 import java.util.Scanner;
 
-public class FindByMap implements FindAble{
+public class FindByMap implements FindAble {
     Scanner scanner = new Scanner(System.in);
     @Override
     public void findMoviesByActor(List<Movies> movies) {

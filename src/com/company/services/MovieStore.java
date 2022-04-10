@@ -1,8 +1,11 @@
-package com.company;
+package com.company.services;
+
+import com.company.Movies;
+import com.company.interfaces.SortAble;
 
 import java.util.*;
 
-public class MovieStore implements SortAble{
+public class MovieStore implements SortAble {
     @Override
     public void printAllMovies(List<Movies> movies) {
         System.out.println(JsonIO.getMovies());

@@ -1,5 +1,8 @@
 package com.company;
 
+import com.company.models.Cast;
+import com.company.models.Director;
+
 import java.util.List;
 
 public class Movies {

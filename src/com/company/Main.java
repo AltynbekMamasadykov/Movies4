@@ -1,4 +1,10 @@
 package com.company;
+import com.company.exceptions.InputException;
+import com.company.interfaces.FindAble;
+import com.company.interfaces.SortAble;
+import com.company.services.JsonIO;
+import com.company.services.MovieStore;
+
 import java.util.List;
 import java.util.Scanner;
 
