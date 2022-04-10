@@ -1,5 +1,4 @@
 package com.company;
-
 import java.util.List;
 import java.util.Scanner;
 
@@ -14,21 +13,39 @@ public class Main {
         s.printAllMovies(movies);
 
         while (true) {
-            commads();
+            commands();
             int inputNumber = in.nextInt();
             if(inputNumber==1){
                 s.printAllMovies(movies);
             }else if(inputNumber==2){
                 s.findMovie(movies);
+            }else if(inputNumber==3){
+                s.sortByYear(movies);
+            }else if(inputNumber==4){
+                s.sortByName(movies);
+            }else if(inputNumber==5){
+                s.sortByDirector(movies);
+            }else if(inputNumber==6){
+                f.findMoviesByActor(movies);
+            }else if(inputNumber==7){
+                f.findMoviesByDirector(movies);
+            } else if (inputNumber==8) {
+                int name =getInt();
+                f.findMoviesByYear(movies,name);
+            }else if (inputNumber==9){
+                f.findMoviesAndRoleByActor(movies);
+            }else if (inputNumber==10){
+                f.showActorRoles(movies);
+            }else if (inputNumber==0){
+                break;
             }
+
         }
-
-
 
     }
 
 
-    static void commads() {
+    static void commands() {
         System.out.println("--------------Commands-----------------------");
         System.out.println("Press 1 to print catalog");
         System.out.println("Press 2 to Find a Movie by full or part name");
